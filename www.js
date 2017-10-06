@@ -4,7 +4,10 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+ // Tweak to play better with iisnode
+require('ts-node').register();
+
+var app = require('./app');
 var debug = require('debug')('web:server');
 var http = require('http');
 
