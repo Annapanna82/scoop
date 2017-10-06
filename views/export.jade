@@ -1,0 +1,98 @@
+extends layout
+
+block content
+  h1= title
+  h2 Export stuff
+
+  form#export(name='export', method='GET', action='/download/')
+    ul
+      li
+        input#post_id(name='post_id', type='checkbox')
+        label(for='post_id') Post Id
+
+      li
+        input#width(name='width', type='checkbox')
+        label(for='width') Image Width
+
+      li
+        input#height(name='height', type='checkbox')
+        label(for='height') Image Height
+  
+      li
+        input#comments(name='comments', type='checkbox')
+        label(for='comments') Comment Count
+
+      li
+        input#likes(name='likes', type='checkbox')
+        label(for='likes') Likes Count
+
+      li
+        input#is_ad(name='is_ad', type='checkbox')
+        label(for='is_ad') Is Ad
+
+      li
+        input#caption(name='caption', type='checkbox')
+        label(for='caption') Caption
+
+      li
+        input#date(name='date', type='checkbox')
+        label(for='date') Date
+
+      li
+        input#display_src(name='display_src', type='checkbox')
+        label(for='display_src') Image Url
+
+    h3 User fields
+    ul
+
+      li
+        input#owner_username(name='owner_username', type='checkbox')
+        label(for='owner_username') Username
+
+      li
+        input#owner_follows(name='owner_follows', type='checkbox')
+        label(for='owner_follows') Follows Count
+
+      li
+        input#owner_followed(name='owner_followed', type='checkbox')
+        label(for='owner_followed') Followed Count
+  
+      li
+        input#owner_profile_hd(name='owner_profile_hd', type='checkbox')
+        label(for='owner_profile_hd') Profile Pic HD
+
+      li
+        input#owner_profile(name='owner_profile', type='checkbox')
+        label(for='owner_profile') Profile Pic
+      li
+        input#owner_biography(name='owner_biography', type='checkbox')
+        label(for='owner_biography') Biography
+
+      li
+        input#owner_full_name(name='owner_full_name', type='checkbox')
+        label(for='owner_full_name') Full Name
+
+      li
+        input#owner_media(name='owner_media', type='checkbox')
+        label(for='owner_media') Post count
+
+      li
+        input#owner_email(name='owner_email', type='checkbox')
+        label(for='owner_email') Email
+
+      li
+        input#owner_external_url(name='owner_external_url', type='checkbox')
+        label(for='owner_external_url') External Url
+    h3 Filter
+    ul
+      li
+        input#filter_email(name='filter_email', type='checkbox')
+        label(for='filter_email') Only posts with an email
+
+      li
+        input#filter_duplicates(name='filter_duplicates', type='checkbox')
+        label(for='filter_duplicates') No duplicate users
+    
+    label(for='tag') Tag
+    input#tag(name='tag', type='text')
+    input#submit(name='submit', type='submit')

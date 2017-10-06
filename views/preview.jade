@@ -1,0 +1,66 @@
+extends layout
+
+block content
+  
+  .preview
+
+    header
+      h3.title-m ##{title}
+
+    .filters
+
+      .select-holder
+        select.filter(data-filter=1)
+          each filter in filters
+            option #{filter}
+
+      .select-holder
+        select.filter(data-filter=2)
+          option(disabled selected) Select filter
+          each filter in filters
+            option #{filter}
+
+      .select-holder
+        select.filter(data-filter=3)
+          option(disabled selected) Select filter
+          each filter in filters
+            option #{filter}
+
+
+    .results
+
+      each post in posts
+      
+        .result
+
+          .filter-row.filter-1
+            span.id.is-active #{post.id}
+            span.date #{post.date}
+            span.comments #{post.comments.count}
+            span.likes #{post.likes.count}
+            span.username #{post.owner.username}
+            span.name #{post.owner.full_name}
+            span.caption #{post.caption}
+            span.thumbnail #{post.thumbnail_src}
+          
+          .filter-row.filter-2
+            span.id #{post.id}
+            span.date.is-active #{post.date}
+            span.comments #{post.comments.count}
+            span.likes #{post.likes.count}
+            span.username #{post.owner.username}
+            span.name #{post.owner.full_name}
+            span.caption #{post.caption}
+            span.thumbnail #{post.thumbnail_src}
+          
+          
+          .filter-row.filter-3
+            span.id #{post.id}
+            span.date #{post.date}
+            span.comments #{post.comments.count}
+            span.likes #{post.likes.count}
+            span.username.is-active #{post.owner.username}
+            span.name #{post.owner.full_name}
+            span.caption #{post.caption}
+            span.thumbnail #{post.thumbnail_src}
+          

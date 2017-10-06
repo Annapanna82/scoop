@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="133px" height="7px" viewBox="0 0 133 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="scoop-landing" transform="translate(-1150.000000, -237.000000)" stroke="#EA1212">
+            <g id="intro" transform="translate(25.000000, 25.000000)">
+                <g id="line" transform="translate(1125.000000, 212.000000)">
+                    <path d="M0.5,6.5 L6.5,0.5" id="Line"></path>
+                    <path d="M12.5,6.5 L18.5,0.5" id="Line"></path>
+                    <path d="M6.5,6.5 L12.5,0.5" id="Line" transform="translate(9.500000, 3.500000) scale(-1, 1) translate(-9.500000, -3.500000) "></path>
+                    <path d="M18.5,6.5 L24.5,0.5" id="Line" transform="translate(21.500000, 3.500000) scale(-1, 1) translate(-21.500000, -3.500000) "></path>
+                    <path d="M24.5,6.5 L30.5,0.5" id="Line"></path>
+                    <path d="M30.5,6.5 L36.5,0.5" id="Line" transform="translate(33.500000, 3.500000) scale(-1, 1) translate(-33.500000, -3.500000) "></path>
+                    <path d="M36.5,6.5 L42.5,0.5" id="Line"></path>
+                    <path d="M42.5,6.5 L48.5,0.5" id="Line" transform="translate(45.500000, 3.500000) scale(-1, 1) translate(-45.500000, -3.500000) "></path>
+                    <path d="M48.5,6.5 L54.5,0.5" id="Line"></path>
+                    <path d="M54.5,6.5 L60.5,0.5" id="Line" transform="translate(57.500000, 3.500000) scale(-1, 1) translate(-57.500000, -3.500000) "></path>
+                    <path d="M60.5,6.5 L66.5,0.5" id="Line"></path>
+                    <path d="M66.5,6.5 L72.5,0.5" id="Line" transform="translate(69.500000, 3.500000) scale(-1, 1) translate(-69.500000, -3.500000) "></path>
+                    <path d="M72.5,6.5 L78.5,0.5" id="Line"></path>
+                    <path d="M78.5,6.5 L84.5,0.5" id="Line" transform="translate(81.500000, 3.500000) scale(-1, 1) translate(-81.500000, -3.500000) "></path>
+                    <path d="M84.5,6.5 L90.5,0.5" id="Line"></path>
+                    <path d="M90.5,6.5 L96.5,0.5" id="Line" transform="translate(93.500000, 3.500000) scale(-1, 1) translate(-93.500000, -3.500000) "></path>
+                    <path d="M96.5,6.5 L102.5,0.5" id="Line"></path>
+                    <path d="M108.5,6.5 L114.5,0.5" id="Line"></path>
+                    <path d="M102.5,6.5 L108.5,0.5" id="Line" transform="translate(105.500000, 3.500000) scale(-1, 1) translate(-105.500000, -3.500000) "></path>
+                    <path d="M114.5,6.5 L120.5,0.5" id="Line" transform="translate(117.500000, 3.500000) scale(-1, 1) translate(-117.500000, -3.500000) "></path>
+                    <path d="M120.5,6.5 L126.5,0.5" id="Line"></path>
+                    <path d="M126.5,6.5 L132.5,0.5" id="Line" transform="translate(129.500000, 3.500000) scale(-1, 1) translate(-129.500000, -3.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
