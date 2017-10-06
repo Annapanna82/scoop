@@ -4,6 +4,8 @@ block content
   
   .preview
 
+    a.close(href="/")
+
     header
       h3.title-m ##{title}
 
@@ -33,34 +35,15 @@ block content
       
         .result
 
-          .filter-row.filter-1
-            span.id.is-active #{post.id}
-            span.date #{post.date}
-            span.comments #{post.comments.count}
-            span.likes #{post.likes.count}
-            span.username #{post.owner.username}
-            span.name #{post.owner.full_name}
-            span.caption #{post.caption}
-            span.thumbnail #{post.thumbnail_src}
-          
-          .filter-row.filter-2
-            span.id #{post.id}
-            span.date.is-active #{post.date}
-            span.comments #{post.comments.count}
-            span.likes #{post.likes.count}
-            span.username #{post.owner.username}
-            span.name #{post.owner.full_name}
-            span.caption #{post.caption}
-            span.thumbnail #{post.thumbnail_src}
-          
-          
-          .filter-row.filter-3
-            span.id #{post.id}
-            span.date #{post.date}
-            span.comments #{post.comments.count}
-            span.likes #{post.likes.count}
-            span.username.is-active #{post.owner.username}
-            span.name #{post.owner.full_name}
-            span.caption #{post.caption}
-            span.thumbnail #{post.thumbnail_src}
-          
+          each i in [1,2,3]
+
+            div.filter-row(class='filter-'+ i)
+
+              span.id.is-active #{post.post_id}
+              span.date #{post.date}
+              span.comments #{post.comments}
+              span.likes #{post.likes}
+              span.username #{post.owner_username}
+              span.name #{post.owner_full_name}
+              span.caption #{post.caption}
+              span.thumbnail #{post.display_src}

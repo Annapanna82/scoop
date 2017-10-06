@@ -55,10 +55,14 @@ function isArray(array){
 	}
 };
 
-// Hello friends.
-var toggleData = document.getElementsByClassName('toggle-data');
-if( toggleData.length > 0 ){
-    Array.prototype.forEach.call(toggleData, (el) => {
+
+/**
+ * Now on to the functionality.
+ */
+
+var togglePopup = document.getElementsByClassName('toggle-popup');
+if( togglePopup.length > 0 ){
+    Array.prototype.forEach.call(togglePopup, (el) => {
         el.onclick = function() {
             this.classList.toggle('is-active');
             var mainHeader = document.getElementById('main');
@@ -68,19 +72,17 @@ if( toggleData.length > 0 ){
 }
 
 each(document.querySelectorAll('.filter'), function(el){
-    console.log(el);
     el.onchange = updateFilter
 });
+
 function updateFilter(event){
-    
-    console.log('w');
 
     var selectedFilter = document.getElementsByClassName('filter-' + event.target.dataset.filter);
     var selectedCategory = event.target.value;
 
     // Loop over selected filter-row
     each(selectedFilter, function(el){
-        
+
         // Hide all thats active
         var activeItems = findAll('.is-active', el);
         each(activeItems, function(el){

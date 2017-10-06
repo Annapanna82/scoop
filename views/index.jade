@@ -6,13 +6,15 @@ block content
 
     #main.main-header
       .inner
-        h1.title-l #[span.logo Scoop] is a tool to gather #[a.link.toggle-data data] from Instagram hashtags.
-        h2.title-l Build something neat with the #[a.link.external(href="#") source code].
+        h1.title-l #[span.logo Scoop] is a tool to gather #[a.link.icon-popup.toggle-popup data] from Instagram hashtags.
+        h2.title-l Build something neat with the #[a.link.external(href="https://github.com/Oh-My/scoop") source code].
 
-      .data-content
+      .popup-content.toggle-popup
         .inner
-          a.title-l.link.toggle-data Data
-          p Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus.
+          h2.title-l Stuff like number of likes, the ID of the post, the username of the poster and more information that is hard to come by manually.
+
+          a.close
+
     .content
 
       header
@@ -23,9 +25,8 @@ block content
           input#tag(name='tag', type='text' placeholder="Add a hashtag")
 
 
-
           each timer in timers
 
-            a.hashtag(href='preview/' + timer.name) #{timer.name} 
+            a.hashtag(href='preview/' + timer.name) #{timer.name}
 
 
