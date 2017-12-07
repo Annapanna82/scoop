@@ -1,5 +1,6 @@
 import * as express from 'express';
 import {startTimer, getTimers, stopTimer} from '../run';
+import { getPosts, getJobs } from '../db';
 
 /**
  * Render the index page where running timers are displayed
@@ -9,11 +10,17 @@ import {startTimer, getTimers, stopTimer} from '../run';
  * @param res the response
  * @param next the next function
  */
-function renderIndexPage(req: express.Request, res: express.Response, next: express.NextFunction) {
+
+async function renderIndexPage(req: express.Request, res: express.Response, next: express.NextFunction) {
+  let jobs = await getJobs();
+  if (!jobs) {
+    jobs = [];
+  }
   res.render('index', {
       title: 'Scoop',
       blobs: [],
-      timers: getTimers()
+      timers: getTimers(),
+      jobs: jobs
   });
 };
 
@@ -25,8 +32,9 @@ function renderIndexPage(req: express.Request, res: express.Response, next: expr
  * @param next the next function
  */
 function handleStartRequest(req: express.Request, res: express.Response, next: express.NextFunction) {
+  const tag = req.body.tag.replace('#', '')
   const opts = {
-    tag: req.body.tag,
+    tag: tag,
     type: 'watch'
   };
   startTimer(opts);
