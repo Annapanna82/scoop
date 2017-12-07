@@ -13,37 +13,55 @@ block content
 
       .select-holder
         select.filter(data-filter=1)
+          option(disabled selected) Select filter
           each filter in filters
-            option #{filter}
+            option(selected=(filter=='id')) #{filter}
 
       .select-holder
         select.filter(data-filter=2)
           option(disabled selected) Select filter
           each filter in filters
-            option #{filter}
+            option(selected=(filter=='likes')) #{filter}
 
       .select-holder
         select.filter(data-filter=3)
           option(disabled selected) Select filter
           each filter in filters
-            option #{filter}
+            option(selected=(filter=='username')) #{filter}
 
 
     .results
 
-      each post in posts
+      if posts.length
+
+        each post in posts
       
-        .result
+          .result
 
-          each i in [1,2,3]
+            each i in [1,2,3]
 
-            div.filter-row(class='filter-'+ i)
+              div.filter-row(class='filter-'+ i)
+                span.id(class= i === 1 ? "is-active" : "") #{post.post_id}
+                span.date #{post.date}
+                span.comments #{post.comments}
+                span.likes(class= i === 2 ? "is-active" : "")  #{post.likes}
+                span.username(class= i === 3 ? "is-active" : "")  #{post.owner_username}
+                span.name #{post.owner_full_name}
+                span.caption #{post.caption}
+                span.thumbnail 
+                  img(src="#{post.display_src}",style="max-width:100%;")
 
-              span.id.is-active #{post.post_id}
-              span.date #{post.date}
-              span.comments #{post.comments}
-              span.likes #{post.likes}
-              span.username #{post.owner_username}
-              span.name #{post.owner_full_name}
-              span.caption #{post.caption}
-              span.thumbnail #{post.display_src}
+      else
+
+        .loader
+          .lds-css
+            .lds-gear[style="100%;height:100%"]
+              div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
