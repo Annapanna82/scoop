@@ -18,15 +18,19 @@ block content
     .content
 
       header
-        h3.title-m hashtag scoop testing
+        h3.title-m Run dem hashtags
 
       .hashtag-list
         form#search(name='search',method='post',action='/search')
           input#tag(name='tag', type='text' placeholder="Add a hashtag")
 
+          each timer in timers.slice(0).reverse()
 
-          each timer in timers
-
-            a.hashtag(href='preview/' + timer.name) #{timer.name}
+            if !timer.job 
+              a.hashtag.timer(href='preview/' + timer.name) #{timer.name}
+          
+          each job in jobs.slice(0).reverse()
+            
+            a.hashtag.job(href='preview/' + job.name) #{job.name}
 
 
