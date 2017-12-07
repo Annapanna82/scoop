@@ -75,7 +75,7 @@ body {
  */
 
 .title-l{
-  font-size: 5vmin;
+  font-size: calc(24px + 1.2vw);
   font-style: italic;
 }
 
@@ -191,7 +191,7 @@ input[type="text"]{
   color: #3B3B3B;
   background: none;
   border: 2px dashed #ddd;
-  font-size: 24px;
+  font-size: calc(18px + 0.5vw);
   text-align: center;
   padding: 15px 20px;
   outline: none;
@@ -212,7 +212,7 @@ input[type="text"]:focus {
   color: #000;
   background: #fff;
   border: 1px solid #fff;
-  font-size: 24px;
+  font-size: calc(18px + 0.5vw);
   text-align: center;
   padding: 17px 20px;
   outline: none;
