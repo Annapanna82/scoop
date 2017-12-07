@@ -68,13 +68,13 @@ async function renderLandingPage(req: express.Request, res: express.Response, ne
 
 /**
  * Register the preview request handlers
- *
+ * 
  * @param app the express app
  */
 export function addPreviewRoutes (app: express.Application) {
   const router = express.Router();
   router.get('/:tag', renderTagPage);
-  router.get('/', renderLandingPage);
+  // router.get('/', renderLandingPage);
   app.use('/preview', router);
 }
 
